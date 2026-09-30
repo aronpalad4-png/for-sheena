@@ -187,7 +187,18 @@
   <!-- MUSIC (change "your-music.mp3" to your actual file name) -->
   <audio id="bgMusic" loop>
   <source src="c6dd09955ad87645633911a25e683848.mp4" type="audio/mp4">
-  </audio>
+  </audio>}
+<audio id="bgMusic" loop>
+  <source src="c6dd09955ad87645633911a25e683848.mp4" type="audio/mp4">
+</audio>
+<script>
+  document.getElementById('bgMusic').addEventListener('timeupdate', function () {
+    if (this.duration && this.currentTime >= this.duration - 2.5) {
+      this.currentTime = 0;
+      this.play();
+    }
+  });
+</script>
   <!-- INTRO SCREEN -->
   <div id="introScreen" class="screen active">
     <h2>Click the heart!</h2>
@@ -206,7 +217,8 @@
   <div id="messageScreen" class="screen">
     <div id="message">
       <p class="intro">Hey <span class="name-highlight" id="displayName"></span>…</p>
-      <p class="intro">My heart has been whispering something to me for a while now,</p>
+      <p class="intro">So I've been wanting to tell you something for a while now</p>
+
       <p class="intro">and I think it’s finally time to tell you</p>
 
       <p>we’ve been friends for a long time na <span class="name-highlight">Sheena</span> and I really value our friendship a lot, but this past few months yung nararamdaman ko sayo is building up. I was in denial sa una, kasi syempre ilang taon na rin naman tayo magkaibigan o magkakilala, and ayoko naman masira yun dahil sa akin. So I hope and I'll do my best to not make it awkward with you. Hindi ko narin kasi kayang itago sayo yung nararamdaman ko.</p>
