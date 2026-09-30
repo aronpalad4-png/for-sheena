@@ -187,18 +187,7 @@
   <!-- MUSIC (change "your-music.mp3" to your actual file name) -->
   <audio id="bgMusic" loop>
   <source src="c6dd09955ad87645633911a25e683848.mp4" type="audio/mp4">
-  </audio>}
-<audio id="bgMusic" loop>
-  <source src="c6dd09955ad87645633911a25e683848.mp4" type="audio/mp4">
-</audio>
-<script>
-  document.getElementById('bgMusic').addEventListener('timeupdate', function () {
-    if (this.duration && this.currentTime >= this.duration - 2.5) {
-      this.currentTime = 0;
-      this.play();
-    }
-  });
-</script>
+  </audio>
   <!-- INTRO SCREEN -->
   <div id="introScreen" class="screen active">
     <h2>Click the heart!</h2>
